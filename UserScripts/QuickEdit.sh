@@ -23,7 +23,7 @@ menu(){
 }
 
 main() {
-    choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/config-compact.rasi | cut -d. -f1)
+    choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/config.rasi | cut -d. -f1)
     case $choice in
 				0)	$tty $editor "/home/tristan/nixos/hosts/SamsungGBook/home.nix"
 						;;

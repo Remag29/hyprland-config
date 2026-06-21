@@ -4,12 +4,12 @@
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 10,
 
         border_size = 2,
 
         col = {
-            active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+            active_border   = { colors = { "rgba(d30062ee)", "rgba(5724f2ee)" }, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
 
@@ -37,6 +37,7 @@ hl.config({
             passes   = 1,
             vibrancy = 0.1696,
         },
+
     },
 
     animations = {
@@ -52,17 +53,16 @@ hl.curve("winOut", { type = "bezier", points = { { 0.3, -0.3 }, { 0,    1    } }
 hl.curve("liner",  { type = "bezier", points = { { 1,    1   }, { 1,    1    } } })
 
 hl.animation({ leaf = "windows",     enabled = true, speed = 6,   bezier = "wind",   style = "slide" })
-hl.animation({ leaf = "windowsIn",   enabled = true, speed = 6,   bezier = "winIn",  style = "slide" })
+hl.animation({ leaf = "windowsIn",   enabled = true, speed = 5,   bezier = "winIn",  style = "slide" })
 hl.animation({ leaf = "windowsOut",  enabled = true, speed = 5,   bezier = "winOut", style = "slide" })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 5,   bezier = "wind",   style = "slide" })
 hl.animation({ leaf = "border",      enabled = true, speed = 1,   bezier = "liner" })
-hl.animation({ leaf = "borderangle", enabled = true, speed = 180, bezier = "liner",  style = "loop" })
+hl.animation({ leaf = "borderangle", enabled = true, speed = 100, bezier = "liner",  style = "loop" })
 hl.animation({ leaf = "fade",        enabled = true, speed = 10,  bezier = "default" })
 hl.animation({ leaf = "workspaces",  enabled = true, speed = 5,   bezier = "wind" })
 
 hl.config({
     dwindle = {
-        -- pseudotile removed in 0.55+
         preserve_split = true,
     },
 
@@ -96,11 +96,6 @@ hl.config({
             scroll_factor        = 0.2,
         },
     },
-})
-
-hl.device({
-    name        = "logitech-g-pro--1",
-    sensitivity = -0.5,
 })
 
 hl.config({

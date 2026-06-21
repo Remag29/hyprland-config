@@ -3,7 +3,7 @@
 
 local mainMod    = "SUPER"
 local scriptsDir = os.getenv("HOME") .. "/.config/hypr/scripts"
-local UserScripts = os.getenv("HOME") .. "/.config/hypr/UserScripts"
+local UserScripts = os.getenv("HOME") .. "/.config/hypr/userScripts"
 
 -- Session
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("hyprctl dispatch exit 0"))
@@ -33,10 +33,10 @@ hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd(scriptsDir .. "/Volume.sh --togg
 hl.bind("XF86AudioMute",        hl.dsp.exec_cmd(scriptsDir .. "/Volume.sh --toggle"),     { locked = true })
 
 -- Resize windows
-hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.resize_active({ x = -50, y = 0 }), { repeating = true })
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize_active({ x = 50,  y = 0 }), { repeating = true })
-hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.resize_active({ x = 0,   y = -50 }), { repeating = true })
-hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.resize_active({ x = 0,   y = 50 }),  { repeating = true })
+hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.resize({ x = -50, y = 0 }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 50,  y = 0 }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.resize({ x = 0,   y = -50 }), { repeating = true })
+hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.resize({ x = 0,   y = 50 }),  { repeating = true })
 
 -- Move windows
 hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.move({ direction = "left" }))

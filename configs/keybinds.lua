@@ -64,7 +64,7 @@ for i = 1, 10 do
     local code = "code:" .. (i + 9)
     hl.bind(mainMod .. " + " .. code,         hl.dsp.focus({ workspace = i }))
     hl.bind(mainMod .. " + SHIFT + " .. code, hl.dsp.window.move({ workspace = i }))
-    hl.bind(mainMod .. " + CTRL + " .. code,  hl.dsp.window.move({ workspace = i, silent = true }))
+    hl.bind(mainMod .. " + CTRL + " .. code,  hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 hl.bind(mainMod .. " + SHIFT + bracketleft",  hl.dsp.window.move({ workspace = -1 }))

@@ -6,7 +6,7 @@ editor=vim
 tty=kitty
 
 configs="$HOME/.config/hypr/configs"
-UserConfigs="$HOME/.config/hypr/UserConfigs"
+UserConfigs="$HOME/.config/hypr/userConfigs"
 
 menu(){
   printf "0. view Nixos Home.nix\n"
@@ -31,31 +31,31 @@ main() {
             $tty $editor "$UserConfigs/ENVariables.conf"
             ;;
         2)
-            $tty $editor "$UserConfigs/WindowRules.conf"
+            $tty $editor "$UserConfigs/window_rules.lua"
             ;;
         3)
-            $tty $editor "$UserConfigs/Startup_Apps.conf"
+            $tty $editor "$UserConfigs/startup_app.lua"
             ;;
         4)
-            $tty $editor "$UserConfigs/UserKeybinds.conf"
+            $tty $editor "$UserConfigs/user_keybinds.lua"
             ;;
         5)
-            $tty $editor "$UserConfigs/Monitors.conf"
+            $tty $editor "$UserConfigs/monitors.lua"
             ;;
         6)
-            $tty $editor "$UserConfigs/Laptops.conf"
+            $tty $editor "$UserConfigs/laptops.lua"
             ;;
         7)
-            $tty $editor "$UserConfigs/UserSettings.conf"
+            $tty $editor "$UserConfigs/user_settings.lua"
             ;;
         8)
-            $tty $editor "$UserConfigs/WorkspaceRules.conf"
+            $tty $editor "$UserConfigs/workspace_rules.lua"
             ;;
 				9)
-            $tty $editor "$configs/Settings.conf"
+            $tty $editor "$configs/settings.lua"
             ;;
         10)
-            $tty $editor "$configs/Keybinds.conf"
+            $tty $editor "$configs/keybinds.conf"
             ;;
         *)
             ;;

@@ -20,7 +20,7 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + Y", hl.dsp.layout("togglesplit"))
 
 -- Screenshot
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | swappy -f -]]))
 
 -- NixOS rebuild
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("kitty --hold -e sudo nixos-rebuild switch --flake /home/tristan/nixos#SamsungGBook"))
